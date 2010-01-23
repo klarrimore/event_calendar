@@ -1,4 +1,5 @@
 class <%= class_name.classify %> < ActiveRecord::Base
   has_event_calendar
-  
+  <%= "belongs_to :#{user_relationship[:model_name].underscore}\n" if user_relationship -%>
+
 end
